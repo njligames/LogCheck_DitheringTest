@@ -229,6 +229,8 @@ typedef NS_ENUM(NSInteger, DitheringAlgorithm) {
                 ditheredPixelBuffer[xy] = newPixel;
             }
         }
+        free(errorBuffer);
+        CGContextRelease(context);
 
         // Finally, we convert our ditheredPixelBuffer into a CGImage, which
         // can be used to create a UIImage, which can be displayed in a
