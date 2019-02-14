@@ -8,11 +8,13 @@
 #import "Algorithms/FloydSteinbergDitherer.h"
 #import "Algorithms/JarvisJudiceNinkeDitherer.h"
 #import "Algorithms/Sierra3Ditherer.h"
+#import "Algorithms/AtkinsonDitherer.h"
 
 typedef NS_ENUM(NSInteger, DitheringAlgorithm) {
     DitheringAlgorithmFloydSteinberg = 0,
     DitheringAlgorithmSierra3,
-    DitheringAlgorithmJarvisJudiceNinke
+    DitheringAlgorithmJarvisJudiceNinke,
+    DitheringAlgorithmAtkinson
 };
 
 @interface ViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
@@ -72,6 +74,14 @@ typedef NS_ENUM(NSInteger, DitheringAlgorithm) {
                      style:UIAlertActionStyleDefault
                      handler:^(UIAlertAction * _Nonnull action) {
                          self->_selectedAlgorithm = DitheringAlgorithmSierra3;
+                         [self dither];
+                     }]];
+    
+    [menu addAction:[UIAlertAction
+                     actionWithTitle:@"Atkinson (1984)"
+                     style:UIAlertActionStyleDefault
+                     handler:^(UIAlertAction * _Nonnull action) {
+                         self->_selectedAlgorithm = DitheringAlgorithmAtkinson;
                          [self dither];
                      }]];
 
@@ -145,6 +155,11 @@ typedef NS_ENUM(NSInteger, DitheringAlgorithm) {
                 break;
             }
                 
+            case DitheringAlgorithmAtkinson: {
+                ditheredImage = [AtkinsonDitherer dither:originalImage targetBounds:targetBounds];
+                break;
+            }
+                
             default:
                 ditheredImage = [Ditherer dither:originalImage targetBounds:targetBounds];
                 break;
@@ -163,6 +178,9 @@ typedef NS_ENUM(NSInteger, DitheringAlgorithm) {
                     break;
                 case DitheringAlgorithmSierra3:
                     [self.algorithmLabel setText:@"Sierra (1989)"];
+                    break;
+                case DitheringAlgorithmAtkinson:
+                    [self.algorithmLabel setText:@"Atkinson (1984)"];
                     break;
                 default:
                     [self.algorithmLabel setText:@"Unknown"];

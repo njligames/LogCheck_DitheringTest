@@ -13,6 +13,7 @@
 		BC0BA16821C8B8F00007D965 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC0BA16721C8B8F00007D965 /* Assets.xcassets */; };
 		BC0BA16B21C8B8F00007D965 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC0BA16921C8B8F00007D965 /* LaunchScreen.storyboard */; };
 		BC0BA16E21C8B8F00007D965 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC0BA16D21C8B8F00007D965 /* main.m */; };
+		C11FDCD522151EB600F64951 /* AtkinsonDitherer.m in Sources */ = {isa = PBXBuildFile; fileRef = C11FDCD422151EB600F64951 /* AtkinsonDitherer.m */; };
 		C1A06A8A2215051600C4430D /* FloydSteinbergDitherer.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A06A892215051600C4430D /* FloydSteinbergDitherer.m */; };
 		C1A06A90221507E500C4430D /* JarvisJudiceNinkeDitherer.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A06A8E221507E500C4430D /* JarvisJudiceNinkeDitherer.m */; };
 		C1A06A91221507E500C4430D /* Sierra3Ditherer.m in Sources */ = {isa = PBXBuildFile; fileRef = C1A06A8F221507E500C4430D /* Sierra3Ditherer.m */; };
@@ -32,6 +33,8 @@
 		BC0BA16D21C8B8F00007D965 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BCCB58F321E7F3D700B17D5E /* DITHERING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DITHERING.md; sourceTree = "<group>"; };
 		BCD4D53021E4713600703BD5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C11FDCD322151EB600F64951 /* AtkinsonDitherer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AtkinsonDitherer.h; sourceTree = "<group>"; };
+		C11FDCD422151EB600F64951 /* AtkinsonDitherer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AtkinsonDitherer.m; sourceTree = "<group>"; };
 		C1A06A882215038700C4430D /* DithererAlgo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DithererAlgo.h; sourceTree = "<group>"; };
 		C1A06A892215051600C4430D /* FloydSteinbergDitherer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FloydSteinbergDitherer.m; sourceTree = "<group>"; };
 		C1A06A8B2215052700C4430D /* FloydSteinbergDitherer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FloydSteinbergDitherer.h; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 		C1A06A85221502F400C4430D /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				C11FDCD322151EB600F64951 /* AtkinsonDitherer.h */,
+				C11FDCD422151EB600F64951 /* AtkinsonDitherer.m */,
 				C1A06A882215038700C4430D /* DithererAlgo.h */,
 				C1A06A942215158300C4430D /* Ditherer.h */,
 				C1A06A92221513F000C4430D /* Ditherer.m */,
@@ -178,6 +183,7 @@
 				BC0BA16321C8B8EE0007D965 /* ViewController.m in Sources */,
 				C1A06A90221507E500C4430D /* JarvisJudiceNinkeDitherer.m in Sources */,
 				C1A06A91221507E500C4430D /* Sierra3Ditherer.m in Sources */,
+				C11FDCD522151EB600F64951 /* AtkinsonDitherer.m in Sources */,
 				BC0BA16E21C8B8F00007D965 /* main.m in Sources */,
 				BC0BA16021C8B8EE0007D965 /* AppDelegate.m in Sources */,
 				C1A06A8A2215051600C4430D /* FloydSteinbergDitherer.m in Sources */,
